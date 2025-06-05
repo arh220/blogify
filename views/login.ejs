@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+        <title>homePage</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+        <center>
+
+            <form class="w-50 mt-5 " method="post" action="/user/login">
+
+                <h1>Login</h1>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" name="email" id="email"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div><br>
+                <div class="form-floating">
+                    <input type="password" name="password" class="form-control" id="floatingPassword"
+                        placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div><br>
+                <div class="d-grid">
+                    <button type=" submit" class=" d-grid btn btn-primary">login</button>
+                </div>
+
+            </form>
+
+        </center>
+        <%- include('./partials/script') %>
+</body>
+
+</html>

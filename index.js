@@ -5,11 +5,15 @@ const staticRouter = require("./routes/staticRouter");
 const blogRouter = require("./routes/blogRouter");
 const cookieParser = require("cookie-parser");
 const { checkForAuthcookie } = require("./middlware/auth");
+require('dotenv').config()
 
 const mongoose = require("mongoose");
+const { env } = require("process");
+
+const PORT = process.env.PORT || 8001;
 
 mongoose
-  .connect("mongodb://localhost:27017/blogify")
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("mongoDB connected..."))
   .catch(Error => console.log(Error));
 

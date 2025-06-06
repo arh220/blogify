@@ -31,4 +31,4 @@ app.use("/user", userRouter);
 app.use("/", staticRouter);
 app.use("/blog", blogRouter);
 
-app.listen(8001, () => console.log("server started..."));
+app.listen(PORT, () => console.log("server started..."));
